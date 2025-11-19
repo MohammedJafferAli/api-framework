@@ -1,36 +1,32 @@
-# API Testing Framework - Allure Reports
+# API Testing Framework - Extent Reports
 
 ## Overview
-Java, Cucumber BDD framework for API testing of JSONPlaceholder REST API with Allure reporting.
+Java, Cucumber BDD framework for API testing of JSONPlaceholder REST API with Extent reporting.
 
 ## Quick Start
 ```bash
 # Setup
 git clone https://github.com/MohammedJafferAli/api-framework.git
 cd api-framework
-git checkout allure-feature
 mvn clean install
 
 # Run tests
 mvn clean test
 
-# Generate Allure report
-mvn allure:report
-
-# Serve Allure report
-mvn allure:serve
+# View Extent report
+open reports/ExtentReport.html
 
 # Docker execution
 docker-compose up --build
 
 # View reports
-open reports/allure-report/index.html
+open reports/ExtentReport.html
 ```
 
 ## Features
 - RestAssured for API testing
 - Cucumber BDD with TestNG
-- Allure Reports with interactive dashboard
+- Extent Reports with interactive dashboard
 - Docker containerization
 - GitHub Actions CI/CD
 - Multi-environment support
@@ -39,8 +35,7 @@ open reports/allure-report/index.html
 ```
 ├── src/test/resources/features/    # BDD feature files
 ├── src/test/java/                  # Test code
-├── reports/allure-results/         # Allure test results
-├── reports/allure-report/          # Generated Allure reports
+├── reports/ExtentReport.html       # Generated Extent reports
 ├── logs/                          # Execution logs
 └── docker-compose.yml             # Docker setup
 ```
@@ -48,9 +43,7 @@ open reports/allure-report/index.html
 ## Commands
 ```bash
 make test              # Run tests in Docker
-make allure-generate   # Generate Allure report
-make allure-serve      # Serve Allure report
-make reports          # Open Allure reports
+make reports          # Open Extent reports
 make clean            # Clean up resources
 ```
 
@@ -61,21 +54,14 @@ make clean            # Clean up resources
 mvn clean test
 ```
 
-### Generate Allure Report
+### Generate & View Extent Report
+The Extent report is automatically generated after test execution:
 ```bash
-# Generate static report
-mvn allure:report
+# Report location
+open reports/ExtentReport.html
 
-# View report
-open reports/allure-report/index.html
-```
-
-### Serve Interactive Allure Report
-```bash
-# Start Allure server (interactive)
-mvn allure:serve
-
-# This will automatically open browser with live report
+# Or use browser
+firefox reports/ExtentReport.html
 ```
 
 ### Docker Testing
@@ -83,18 +69,13 @@ mvn allure:serve
 # Run tests in Docker
 docker-compose up --build
 
-# Generate report after completion
-mvn allure:report
-
-# View reports
-open reports/allure-report/index.html
+# View reports after completion
+open reports/ExtentReport.html
 ```
 
 ### Report Features
 - Interactive dashboard with test statistics
-- Detailed test execution timeline
-- Test categorization and filtering
-- Historical trends and comparisons
-- Attachments and screenshots
+- Detailed test execution logs
+- Screenshots for failed tests
+- Timeline view of test execution
 - Environment and system information
-- Retry and flaky test analysis
