@@ -1,0 +1,113 @@
+/* API Testing Framework - Custom Extent Report Styling */
+
+/* Header Branding */
+.navbar-brand::before {
+    content: "🚀 ";
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* Dashboard Enhancement */
+.dashboard-view .card {
+    background: linear-gradient(145deg, #2c3e50, #34495e) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Test Status Colors */
+.test-status.pass {
+    background: linear-gradient(45deg, #27ae60, #2ecc71) !important;
+    color: white !important;
+    padding: 5px 15px !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+}
+
+.test-status.fail {
+    background: linear-gradient(45deg, #e74c3c, #c0392b) !important;
+    color: white !important;
+    padding: 5px 15px !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+}
+
+/* Performance Metrics */
+.performance-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin: 10px 0 !important;
+}
+
+/* Test Timeline */
+.timeline-item {
+    border-left: 3px solid #3498db !important;
+    padding-left: 20px !important;
+    margin: 15px 0 !important;
+    position: relative !important;
+}
+
+.timeline-item::before {
+    content: "●" !important;
+    position: absolute !important;
+    left: -8px !important;
+    background: #3498db !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 15px !important;
+    height: 15px !important;
+    text-align: center !important;
+    line-height: 15px !important;
+    font-size: 10px !important;
+}
+
+/* API Response Styling */
+.api-response {
+    background: #1e1e1e !important;
+    border: 1px solid #444 !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    font-family: 'Courier New', monospace !important;
+    color: #f8f8f2 !important;
+    overflow-x: auto !important;
+}
+
+/* Test Data Tables */
+.test-data-table {
+    background: rgba(255,255,255,0.05) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.test-data-table th {
+    background: linear-gradient(135deg, #2c3e50, #3498db) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* Execution Summary */
+.execution-summary {
+    background: linear-gradient(135deg, #1a252f, #2c3e50) !important;
+    border-radius: 15px !important;
+    padding: 25px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .card {
+        margin: 10px 5px !important;
+    }
+    
+    .navbar-brand {
+        font-size: 18px !important;
+    }
+    
+    .performance-card {
+        padding: 15px !important;
+    }
+}

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  api-tests:
+    build: .
+    volumes:
+      - ./reports:/app/reports
+      - ./logs:/app/logs
+      - ./test-results:/app/test-results
+      - ./artifacts:/app/artifacts
+    environment:
+      - MAVEN_OPTS=-Dmaven.repo.local=/app/.m2/repository
+      - ALLURE_RESULTS_DIRECTORY=reports/allure-results
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge

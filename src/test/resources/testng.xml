@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Testing Framework - Test Suite">
+    <listeners>
+        <listener class-name="com.api.framework.listeners.ExtentTestListener"/>
+    </listeners>
+    <test name="API Tests">
+        <classes>
+            <class name="com.api.framework.runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,53 @@
+# Maven
+target/
+.m2/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.eclipse/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Allure Reports
+reports/allure-results/*
+reports/allure-report/*
+.allure/
+
+# Other Reports
+reports/json/*.json
+reports/xml/*.xml
+reports/html/*.html
+reports/cucumber-reports/
+
+# Logs
+logs/*.log
+*.log
+
+# Test Results
+test-results/*
+artifacts/*
+
+# Keep folder structure
+!reports/allure-results/.gitkeep
+!reports/allure-report/.gitkeep
+!reports/json/.gitkeep
+!reports/xml/.gitkeep
+!reports/html/.gitkeep
+!logs/.gitkeep
+!test-results/.gitkeep
+!artifacts/.gitkeep
