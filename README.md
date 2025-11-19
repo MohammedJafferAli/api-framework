@@ -1,4 +1,4 @@
-# API Testing Framework
+# API Testing Framework - Allure Reports
 
 ## Overview
 Java, Cucumber BDD framework for API testing of JSONPlaceholder REST API with Allure reporting.
@@ -6,7 +6,9 @@ Java, Cucumber BDD framework for API testing of JSONPlaceholder REST API with Al
 ## Quick Start
 ```bash
 # Setup
-git clone <repo-url> && cd api-framework
+git clone https://github.com/MohammedJafferAli/api-framework.git
+cd api-framework
+git checkout allure-feature
 mvn clean install
 
 # Run tests
@@ -51,3 +53,48 @@ make allure-serve      # Serve Allure report
 make reports          # Open Allure reports
 make clean            # Clean up resources
 ```
+
+## Test Execution & Reporting
+
+### Run Tests
+```bash
+mvn clean test
+```
+
+### Generate Allure Report
+```bash
+# Generate static report
+mvn allure:report
+
+# View report
+open reports/allure-report/index.html
+```
+
+### Serve Interactive Allure Report
+```bash
+# Start Allure server (interactive)
+mvn allure:serve
+
+# This will automatically open browser with live report
+```
+
+### Docker Testing
+```bash
+# Run tests in Docker
+docker-compose up --build
+
+# Generate report after completion
+mvn allure:report
+
+# View reports
+open reports/allure-report/index.html
+```
+
+### Report Features
+- Interactive dashboard with test statistics
+- Detailed test execution timeline
+- Test categorization and filtering
+- Historical trends and comparisons
+- Attachments and screenshots
+- Environment and system information
+- Retry and flaky test analysis

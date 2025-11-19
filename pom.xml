@@ -45,6 +45,7 @@
             <artifactId>testng</artifactId>
             <version>7.8.0</version>
         </dependency>
+        <!-- Allure Reporting -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
